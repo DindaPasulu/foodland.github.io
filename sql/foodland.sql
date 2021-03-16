@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2021 at 01:18 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.3.27
+-- Waktu pembuatan: 16 Mar 2021 pada 02.42
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -39,7 +40,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `menus`
+-- Struktur dari tabel `menus`
 --
 
 CREATE TABLE `menus` (
@@ -52,7 +53,7 @@ CREATE TABLE `menus` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `menus`
+-- Dumping data untuk tabel `menus`
 --
 
 INSERT INTO `menus` (`id`, `nama`, `jenis_menu`, `gambar`, `created_at`, `updated_at`) VALUES
@@ -65,7 +66,7 @@ INSERT INTO `menus` (`id`, `nama`, `jenis_menu`, `gambar`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -75,7 +76,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -90,7 +91,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -102,7 +103,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pesanans`
+-- Struktur dari tabel `pesanans`
 --
 
 CREATE TABLE `pesanans` (
@@ -117,7 +118,7 @@ CREATE TABLE `pesanans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pesanans`
+-- Dumping data untuk tabel `pesanans`
 --
 
 INSERT INTO `pesanans` (`id`, `kode_pemesanan`, `status`, `total_harga`, `kodeunik`, `user_id`, `created_at`, `updated_at`) VALUES
@@ -132,7 +133,7 @@ INSERT INTO `pesanans` (`id`, `kode_pemesanan`, `status`, `total_harga`, `kodeun
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pesanan_details`
+-- Struktur dari tabel `pesanan_details`
 --
 
 CREATE TABLE `pesanan_details` (
@@ -146,7 +147,7 @@ CREATE TABLE `pesanan_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pesanan_details`
+-- Dumping data untuk tabel `pesanan_details`
 --
 
 INSERT INTO `pesanan_details` (`id`, `jumlah_pesanan`, `total_harga`, `product_id`, `pesanan_id`, `created_at`, `updated_at`) VALUES
@@ -162,7 +163,7 @@ INSERT INTO `pesanan_details` (`id`, `jumlah_pesanan`, `total_harga`, `product_i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Struktur dari tabel `products`
 --
 
 CREATE TABLE `products` (
@@ -179,27 +180,27 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `products`
+-- Dumping data untuk tabel `products`
 --
 
 INSERT INTO `products` (`id`, `nama`, `harga`, `is_ready`, `jenis_makanan`, `deskripsi`, `gambar`, `menu_id`, `created_at`, `updated_at`) VALUES
-(1, 'Brownie', 50000, 1, NULL, NULL, 'brownie.png', 1, NULL, NULL),
-(2, 'French Fries', 50000, 1, NULL, NULL, 'frenchfries.png', 1, NULL, NULL),
-(3, 'Beef Steak', 50000, 1, NULL, NULL, 'steak.png', 2, NULL, NULL),
-(4, 'Curry', 50000, 1, NULL, NULL, 'curry.png', 2, NULL, NULL),
-(5, 'Burger', 50000, 1, NULL, NULL, 'hamburger.png', 2, NULL, NULL),
-(6, 'Spicy Fried Chicken', 50000, 1, NULL, NULL, 'spicyfriedchicken.png', 3, NULL, NULL),
-(7, 'Nugget', 50000, 1, NULL, NULL, 'nugget.png', 3, NULL, NULL),
-(8, 'Chocolate Milk', 50000, 1, NULL, NULL, 'susucoklat.png', 4, NULL, NULL),
-(9, 'Rasberry Pie', 50000, 1, NULL, NULL, 'pie.png', 4, NULL, NULL),
-(10, 'Tuna Spaghetti', 50000, 1, NULL, NULL, 'pasta.png', 4, NULL, NULL),
-(11, 'Espresso', 50000, 1, NULL, NULL, 'espresso.png', 5, NULL, NULL),
-(12, 'Lemon Tea', 50000, 1, NULL, NULL, 'lemontea.png', 5, NULL, NULL);
+(1, 'Brownie', 15000, 1, NULL, NULL, 'brownie.png', 1, NULL, NULL),
+(2, 'French Fries', 20000, 1, NULL, NULL, 'frenchfries.png', 1, NULL, NULL),
+(3, 'Beef Steak', 100000, 1, NULL, NULL, 'steak.png', 2, NULL, NULL),
+(4, 'Curry', 30500, 1, NULL, NULL, 'curry.png', 2, NULL, NULL),
+(5, 'Burger', 23500, 1, NULL, NULL, 'hamburger.png', 2, NULL, NULL),
+(6, 'Spicy Fried Chicken', 45000, 1, NULL, NULL, 'spicyfriedchicken.png', 3, NULL, NULL),
+(7, 'Nugget', 20500, 1, NULL, NULL, 'nugget.png', 3, NULL, NULL),
+(8, 'Chocolate Milk', 10500, 1, NULL, NULL, 'susucoklat.png', 4, NULL, NULL),
+(9, 'Rasberry Pie', 6000, 1, NULL, NULL, 'pie.png', 4, NULL, NULL),
+(10, 'Tuna Spaghetti', 60000, 1, NULL, NULL, 'pasta.png', 4, NULL, NULL),
+(11, 'Espresso', 11000, 1, NULL, NULL, 'espresso.png', 5, NULL, NULL),
+(12, 'Lemon Tea', 10000, 1, NULL, NULL, 'lemontea.png', 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -218,7 +219,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `gender`, `birth_date`, `email`, `email_verified_at`, `password`, `alamat`, `nohp`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -229,96 +230,96 @@ INSERT INTO `users` (`id`, `name`, `gender`, `birth_date`, `email`, `email_verif
 --
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `menus`
+-- Indeks untuk tabel `menus`
 --
 ALTER TABLE `menus`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `pesanans`
+-- Indeks untuk tabel `pesanans`
 --
 ALTER TABLE `pesanans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pesanan_details`
+-- Indeks untuk tabel `pesanan_details`
 --
 ALTER TABLE `pesanan_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `products`
+-- Indeks untuk tabel `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `menus`
+-- AUTO_INCREMENT untuk tabel `menus`
 --
 ALTER TABLE `menus`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT for table `pesanans`
+-- AUTO_INCREMENT untuk tabel `pesanans`
 --
 ALTER TABLE `pesanans`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `pesanan_details`
+-- AUTO_INCREMENT untuk tabel `pesanan_details`
 --
 ALTER TABLE `pesanan_details`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT untuk tabel `products`
 --
 ALTER TABLE `products`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
